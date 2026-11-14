@@ -1,0 +1,55 @@
+{
+  "name": "dsh-instruction-optimizer",
+  "version": "1.1.0",
+  "type": "module",
+  "description": "像指令秘书一样，把口语草稿变成专业、准确、可直接发送的指令；结合当前会话理解你的意思，支持多轮交互修改，保留附件和 @文件。",
+  "author": "zhaoqiminggg <zhaoqiminggg@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/zhaoqiminggg/dsh-instruction-optimizer#readme",
+  "bugs": {
+    "url": "https://github.com/zhaoqiminggg/dsh-instruction-optimizer/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhaoqiminggg/dsh-instruction-optimizer.git"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "instruction",
+    "prompt",
+    "composer"
+  ],
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-sidebar-right",
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}
