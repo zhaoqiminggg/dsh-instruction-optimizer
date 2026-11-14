@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Instruction optimizer",
+    "description": "Turn a rough draft into a clear, accurate instruction that DSH can execute. It reads the current session to resolve context, supports multi-round feedback, and keeps attachments and @file references."
+  }
+}
