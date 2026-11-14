@@ -1,0 +1,3 @@
+- insert:
+    - id: instruction-optimizer
+      name: 'dsh-instruction-optimizer'
